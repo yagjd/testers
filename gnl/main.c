@@ -6,7 +6,7 @@
 /*   By: marhuber <falcino@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 09:44:19 by marhuber          #+#    #+#             */
-/*   Updated: 2025/10/31 22:56:00 by marhuber         ###   ########.fr       */
+/*   Updated: 2025/11/05 16:58:51 by marhuber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	testshow(char *filename, int lines)
 
 	fd = open(filename, O_RDONLY);
 	n = lines;
-	fd = open("testtxt.txt", O_RDONLY);
 	ft_putnbr_fd(fd, 1);
 	ft_putstr_fd("\n", 1);
 	while (n)
@@ -125,6 +124,11 @@ int	main(int argc, char **argv)
 		execbatterytest(argv);
 	else if (argc == 3)
 		testshow(argv[1], ft_atoi(argv[2]));
+	else if (argc == 4)
+	{
+		if (!get_next_line(25))
+			ft_putstr_fd("ok", 1);
+	}
 	else
 		testshow("testtxt.txt", 110);
 }

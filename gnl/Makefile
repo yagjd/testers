@@ -3,7 +3,7 @@
 CC = cc
 CFLAGS += -Wall -Wextra -Werror -g
 # Constants
-D = -D BUFFER_SIZE=1024
+D = -D BUFFER_SIZE=4096
 # Code
 SOURCES = get_next_line.c get_next_line_utils.c main.c main_utils.c
 SOURCES_BONUS = get_next_line_bonus.c get_next_line_utils_bonus.c main.c main_utils.c
